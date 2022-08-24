@@ -45,6 +45,14 @@ export default function App() {
       onCompleteCallback: function (args) {
         alert(args);
       },
+      
+      paymentOptionsConfig: {
+        // Only allow local card and online payments
+        filters: {
+          type: ['online', 'credit_card'],
+          currency: ['fx']
+          }
+      },
 
       nonce: "REF1234",
       returnUrl: "https://httpbin.org/get"
