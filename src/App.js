@@ -31,8 +31,8 @@ export default function App() {
       // alternatively be omitted rather than included with empty or null
       // values)
       recipientFields: {
-        airhost_client_id: "Client123",
-        airhost_transaction_id: "Abcd1234"
+        airhost_client_id: "AHT",
+        airhost_transaction_id: "payment-uuid"
       },
 
       // Recommended (not required) validation error handler
@@ -45,12 +45,12 @@ export default function App() {
       onCompleteCallback: function (args) {
         alert(args);
       },
-      
+
       paymentOptionsConfig: {
         // Only allow local card and online payments
         filters: {
           type: ['online', 'credit_card'],
-          currency: ['fx']
+          currency: ['nonFX']
           }
       },
 
