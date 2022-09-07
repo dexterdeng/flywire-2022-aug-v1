@@ -46,13 +46,6 @@ export default function App() {
         alert(args);
       },
 
-      paymentOptionsConfig: {
-        // Only allow local card and online payments
-        filters: {
-          type: ['credit_card'],
-          currency: ['nonFX']
-          }
-      },
 
       nonce: "REF1234",
       returnUrl: "https://httpbin.org/get",
