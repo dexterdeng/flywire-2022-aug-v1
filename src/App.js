@@ -55,7 +55,7 @@ export default function App() {
       },
 
       nonce: "REF1234",
-      returnUrl: "https://httpbin.org/get"
+      returnUrl: "https://httpbin.org/get",
       // Enable payment status notification callbacks
       callbackId: "REF1234",
       callbackUrl: "https://api2-stage.airhost.co/api/one/pms/flywire_notifications.json",
