@@ -49,7 +49,7 @@ export default function App() {
       paymentOptionsConfig: {
         // Only allow local card and online payments
         filters: {
-          type: ['online', 'credit_card'],
+          type: ['credit_card'],
           currency: ['nonFX']
           }
       },
@@ -57,9 +57,9 @@ export default function App() {
       nonce: "REF1234",
       returnUrl: "https://httpbin.org/get"
       // Enable payment status notification callbacks
-      // callbackId: "REF1234",
-      // callbackUrl: "https://api.yourdomain.com/flywire-notifications",
-      // callbackVersion: "2"
+      callbackId: "REF1234",
+      callbackUrl: "https://api2-stage.airhost.co/api/one/pms/flywire_notifications.json",
+      callbackVersion: "2"
     };
 
     var modal = window.FlywirePayment.initiate(config);
